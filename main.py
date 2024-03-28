@@ -21,7 +21,7 @@ def chatbot(input):
     reply = chat.choices[0].message.content
     return reply
 
-# Custom CSS to adjust styles and attempt to target the whole window
+
 st.markdown("""
 <style>
     /* Attempt to change the overall background */
@@ -59,10 +59,10 @@ st.markdown("""
 # Headers and user input
 st.markdown("<h2 style='color: #4CAF50; margin-top: 0;'>AI Travel Advisor</h2>", unsafe_allow_html=True)
 st.markdown("<h4 style='color: #4CAF50;'>Tell me about your travel plans:</h4>", unsafe_allow_html=True)  # Custom prompt with corrected CSS
-# Adjusted user input with a label and hiding the label
+
 user_input = st.text_input("Prompt", '', label_visibility="collapsed")
 
-# Adjusted reply box with a label and hiding the label
+
 if st.button("Submit"):
     reply = chatbot(user_input)
     if reply:
